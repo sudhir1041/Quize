@@ -30,7 +30,6 @@ def students_login(request):
                 return render(request, 'login.html', {'error': msg})
             else:
                 pass
-
         
 def teacher_login(request):
     if request.method == "GET":
@@ -54,3 +53,7 @@ def teacher_login(request):
                 return render(request, 'login.html', {'error': msg})
             else:
                 pass
+def students_dashboard(request):
+    return render(request,'student_dashboard.html')
+def teacher_dashboard(request):
+    return render(request,'teacher_dashboard.html')
